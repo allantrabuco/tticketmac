@@ -1,0 +1,401 @@
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;  
+}
+
+.tm-body {
+  font-family: Helvetica, verdana, sans-serif;
+  background-color: #023240;
+  max-width: 1440px;
+  min-width: 1440px;
+  max-height: 900px;
+  min-height: 900px;
+  padding: 20px;
+}
+
+/* pages dimensions */
+.tm-page {
+  max-width: 1400px;
+  min-width: 1400px;
+  max-height: 860px;
+  min-height: 860px;
+  z-index: 99999999;
+}
+
+.tm-page-section {
+  position: relative;
+  z-index: 99999;
+}
+
+/* atrabuco-logo */
+div.tm-atrabuco-logo {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  max-width: 70px;
+  min-width: 70px;
+  max-height: 70px;
+  min-height: 70px;
+  z-index: 1000;
+  background-image: url('../assets/images/atrabuco_logo.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.tm-main-page-back, div.tm-sstation-page-back, div.tm-finish-page-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  max-width: 1400px;
+  min-width: 1400px;
+  max-height: 860px;
+  min-height: 860px;
+  z-index: 999;
+  background: url('../assets/images/background/night-photograph-1218668_1280.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.tm-main-page-back, div.tm-sstation-page-back, div.tm-finish-page-back { 
+  opacity: .5;
+}
+
+img.tm-main-page-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  max-width: 1400px;
+  min-width: 1400px;
+  max-height: 860px;
+  min-height: 860px;
+}
+
+.tm-main-content, tm-sstation-content {
+  z-index: 999;
+  color: #fff;
+  position: absolute;
+  padding-top: 180px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.tm-main-current-text {
+  padding-top: 70px;
+  font-size: 14px;
+  opacity: .6;
+}
+
+.tm-main-station-name {
+  margin-top: -10px;
+  font-size: 28px;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+    outline: 0px;
+    outline-offset: -2px;
+}
+
+.btn-tm-primary, .btn-tm-primary:focus {
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  background-color: #2196F3;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-tm-primary:hover {
+  color:#fff;
+  background-color: #3072a5;
+  text-decoration: none;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
+
+.tm-main-content .btn-tm-primary {
+  margin-top: 130px;
+}
+
+
+
+/* Search Station Page */
+div.tm-sstation-page-back {
+  background: url('../assets/images/background/underground-1081975_1280.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.tm-sstation-content {
+  color: #fff;
+  padding-top: 20px;
+}
+
+
+.tm-sstation-from-text, .tm-sstation-to-text  {
+  font-size: 20px;
+  line-height: 60px;
+  vertical-align: text-bottom;
+}
+
+.tm-sstation-from-name {
+  font-size: 36px;
+}
+
+.tm-sstation-to {
+  width: 60px;
+  float: left;
+}
+
+.tm-sstation-to-text {
+  line-height: initial;
+}
+
+
+.tm-sstation-form {
+  padding-top: 40px;
+}
+
+
+div .tm-sstation-to-input {
+  margin-left: 8px;
+  width: 1204px;
+  float: left;
+}
+
+input.tm-sstation-to-input {
+  background-color: rgba(48,114,165,0.60);
+  color:#fff;
+  border: 0;
+  height: 45px;
+  line-height: 45px;
+  font-size: 28px;
+  padding-left: 10px;
+  font-variant-caps: all-petite-caps;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(2,50,64,.5);
+  font-variant-caps: initial;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(2,50,64,.5);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(2,50,64,.5);
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(2,50,64,.5);
+}
+
+.tm-btn-erase {
+  margin-top: -7px;
+  margin-left: 35px;
+  float:left;
+}
+
+
+.tm-btn-alpha-keyboard, .tm-btn-suggestion-key {
+  background-color: rgba(48,114,165,0.80);
+  color:#fff;
+  margin-left: 10px;
+  margin-bottom: 8px;
+  float:left;
+}
+
+.tm-btn-alpha-keyboard:hover,
+.tm-btn-suggestion-key:hover {
+  color:#fff;
+  background-color: rgba(2,50,64,.2);
+}
+
+.tm-btn-alpha-keyboard:focus,
+.tm-btn-suggestion-key:focus {
+  color:#fff;
+}
+
+
+.tm-btn-suggestion-key {
+  background-color: rgba(2,50,64,.8);
+}
+
+.tm-btn-key-label {
+  font-size:20px;
+}
+
+.tm-btn-key-label:hover, .tm-btn-key-label:focus {
+  color:#fff;
+  font-size:20px;
+}
+
+.tm-btn-back {
+  position: fixed;
+  top: 800px;
+  left: 30px;
+}
+
+.tm-btn-sm-circle, .tm-btn-md-circle, .tm-btn-lg-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;  
+  color: #fff;
+}
+
+.tm-light-blue-back-color {
+  background-color: rgba(48,114,165,0.80);
+}
+
+.tm-light-gree-back-color {
+  background-color: rgba(0,204,153,.4);
+}
+
+.tm-light-gree-back-color:hover, .tm-light-gree-back-color:focus {
+  background-color: rgba(0,204,153,.2);
+}
+
+.tm-btn-md-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+}
+
+.tm-btn-lg-square {
+  width: 570px;
+  border-radius: 10px;
+}
+
+.tm-btn-sm-square {
+  width: 76px;
+  border-radius: 10px;
+}
+
+.tm-btn-lg-circle {
+  width: 66px;
+  height: 66px;
+  border-radius: 66px;  
+}
+
+
+
+.tm-keyboard-position {
+  position: fixed;
+  top: 642px;
+}
+
+
+
+.tm-btn-back:hover, .tm-btn-back:focus,
+.tm-btn-erase:hover, .tm-btn-erase:focus {
+  color: #fff;
+}
+
+.tm-btn-erase-size {
+  font-size: 24px;
+}
+
+.tm-btn-erase-size:hover {
+  font-size: 28px;
+}
+
+.tm-btn-back-size {
+  font-size: 28px;
+}
+
+.tm-btn-back-size:hover {
+  font-size: 32px;
+}
+
+
+.tm-list-stations-group {
+  color: #fff;
+  margin-left: 60px;
+  max-width: 1204px;
+  text-align: left;
+}
+
+button.tm-list-stations-item, .tm-list-stations-item {
+  color: #fff;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: rgba(48,114,165,0.30); 
+  border: 1px solid #023240;
+}
+
+button.tm-list-stations-item:hover {
+  color: rgba(48,114,165,0.80);
+  background-color: #fff;
+}
+
+
+button.tm-btn-buy {
+  position: fixed;
+  height: 140px;
+  width: 140px;
+  top: 724px;
+  left: 1263px;
+}
+
+button.tm-btn-buy:hover, button.tm-btn-buy:focus  {
+  color:#fff;
+  position: fixed;
+  height: 140px;
+  width: 140px;
+  top: 724px;
+  left: 1263px;
+}
+
+
+/* Finish Page */
+div.tm-finish-page-back {
+  background: url('../assets/images/background/railway-station-1363771_1280.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+/* animation */
+.myslide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    background: transparent;
+}
+
+.myslide.ng-enter {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.myslide.ng-enter {
+    left: 100%;
+}
+.myslide.ng-enter-active {
+    left: 0;
+}

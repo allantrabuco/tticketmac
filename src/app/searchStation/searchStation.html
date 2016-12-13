@@ -1,0 +1,122 @@
+<div class="container tm-page">
+
+  <div class="tm-atrabuco-logo"></div>
+  <div class="tm-sstation-page-back"></div>
+
+  <section class="tm-page-section">
+    <div class="tm-sstation-content text-center">
+      <p class="tm-sstation-from">
+        <span class="tm-sstation-from-text">From</span>
+        <span class="tm-sstation-from-name" ng-bind="sstation.currentStationName"></span>
+      </p>
+
+      <div class="row tm-sstation-form">
+        <div class="tm-sstation-to text-right">
+          <span class="tm-sstation-to-text">To</span>
+        </div>
+        <div class="tm-sstation-to-input">
+          <input type="text" class="tm-sstation-to-input" placeholder="Type to search a station"
+            maxlength="60"
+            ng-maxlength="60"
+            ng-model="sstation.toStation"
+            ng-keyup="sstation.inputKeyUp($event)"
+          >
+        </div>
+        <button type="button" class="btn btn-sm tm-btn-md-circle tm-light-blue-back-color tm-btn-erase" ng-click="sstation.eraseStation()">
+            <span class="glyphicon glyphicon-erase tm-btn-erase-size" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="list-group tm-list-stations-group" ng-if="sstation.showList">
+        <button type="button" 
+            ng-click="sstation.selected(name)" 
+            class="tm-list-stations-item list-group-item list-group-item-action" 
+            ng-repeat="name in sstation.stations | filter: sstation.toStation">
+          {{name}}
+        </button>
+      </div>
+
+      <div class="col-lg-12 tm-keyboard-position">
+        <div class="row">  <!-- first line of QWERTY keyboard -->
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div class="col-lg-12">
+                <div ng-repeat="key in sstation.keyLine1">
+                  <button type="button" class="btn btn-sm tm-btn-sm-circle" 
+                    ng-class="{'tm-btn-alpha-keyboard': !sstation.keyLine1s[$index], 'tm-btn-suggestion-key': sstation.keyLine1s[$index]}" 
+                    ng-click="sstation.keypressed(key)">
+                  <span class="tm-btn-key-label">{{key}}</span>
+                  </button>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+
+        <div class="row">  <!-- second line of QWERTY keyboard -->
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6" style="padding-left:45px;">
+            <div class="col-lg-12">
+                <button type="button" class="btn btn-sm tm-btn-sm-circle"
+                  ng-class="{'tm-btn-alpha-keyboard': !sstation.keyLine2s[$index], 'tm-btn-suggestion-key': sstation.keyLine2s[$index]}" 
+                  ng-click="sstation.keypressed(key)"
+                  ng-repeat="key in sstation.keyLine2">
+                  <span class="tm-btn-key-label">{{key}}</span>
+                </button>
+            </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+
+        <div class="row">  <!-- third line of QWERTY keyboard -->
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6" style="padding-left:103px;">
+            <div class="col-lg-12">
+                <div ng-repeat="key in sstation.keyLine3">
+                  <button type="button" class="btn btn-sm tm-btn-sm-circle"
+                    ng-class="{
+                      'tm-btn-alpha-keyboard': !sstation.keyLine3s[$index], 
+                      'tm-btn-suggestion-key': sstation.keyLine3s[$index], 
+                      'tm-btn-sm-square': key==='RET'
+                    }"
+                    ng-click="sstation.keypressed(key)">
+                    <span ng-if="key !== 'RET'" class="tm-btn-key-label">{{key}}</span>
+                    <span ng-if="key === 'RET'" class="glyphicon glyphicon-chevron-left tm-btn-erase-size" aria-hidden="true"></span>
+                  </button>
+              </div>
+            </div>
+            <div class="col-lg-3"></div></div>
+        </div>
+
+        <div class="row">  <!-- fourth line of QWERTY keyboard (space key) -->
+          <div class="col-lg-3"></div>
+          <div class="col-lg-6">
+            <div class="col-lg-12">
+              <button type="button" class="btn btn-sm tm-btn-lg-square"
+                ng-class="{
+                  'tm-btn-alpha-keyboard': !sstation.keySpaces, 
+                  'tm-btn-suggestion-key': sstation.keySpaces 
+                }"                 
+                ng-click="sstation.keypressed('spc')">
+              
+                <span class="tm-btn-key-label">Space</span>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-3"></div>
+        </div>
+      </div>  <!-- end of keyboard -->
+
+      <button type="button" class="btn btn-lg tm-light-gree-back-color tm-btn-buy" ng-if="sstation.showBtnBuy" ng-click="sstation.thanksAlert()">
+          <span class="glyphicon glyphicon-credit-card tm-btn-back-size" aria-hidden="true"></span><br>Get the ticket
+      </button>
+
+
+
+    </div>  <!-- end of tm-sstation-content -->
+
+    <button type="button" class="btn btn-sm tm-btn-lg-circle tm-light-blue-back-color tm-btn-back" ng-click="sstation.goBack()">
+        <span class="glyphicon glyphicon-hand-left tm-btn-back-size" aria-hidden="true"></span>
+    </button>
+  </section>
+</div>

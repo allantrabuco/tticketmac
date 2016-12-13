@@ -1,0 +1,17 @@
+<div class="container tm-page">
+
+  <div class="tm-atrabuco-logo"></div>
+  <div class="tm-main-page-back"></div> 
+
+  <section class="tm-page-section">
+    <div class="tm-main-content text-center">
+      <h1>Welcome to Train Ticket Machine</h1>
+      <p class="tm-main-current-text">Your current station:</p>
+      <p class="tm-main-station-name" ng-bind="main.currentStationName"></p>
+
+      <button type="button" class="btn btn-sm btn-tm-primary" ng-click="main.callSearchStation()">
+          Tap to buy a ticket
+      </button>
+    </div>
+  </section>
+</div>
